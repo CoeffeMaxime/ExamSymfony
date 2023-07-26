@@ -1,0 +1,21 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}
+    Acheter : {{ listing.model.brand.name }}
+{% endblock %}
+
+{% block body %}
+    <div class="card mb-3">
+        <img src="{{ listing.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Model : {{ listing.model.name }}</h5>
+            <p class="card-text">Marque : {{ listing.model.brand.name }}</p>
+            <p class="card-text">Année de production : {{ listing.producedYear }}</p>
+            <p class="card-text">Prix: {{ listing.price }}€</p>
+            <p class="card-text">Kilométrage: {{ listing.mileage }} km</p>
+            <p class="card-text"><small class="text-muted">mise en ligne le : {{ listing.createdAt|date }}</small></p>
+        </div>
+    </div>
+
+
+{% endblock %}

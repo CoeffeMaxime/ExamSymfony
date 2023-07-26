@@ -1,0 +1,15 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}
+<title>Edit Model</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Edit Model</h1>
+    {% form_theme form 'bootstrap_5_layout.html.twig' %}
+    {{ include('back/model/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_model_index') }}">back to list</a>
+
+    {{ include('back/model/_delete_form.html.twig') }}
+{% endblock %}

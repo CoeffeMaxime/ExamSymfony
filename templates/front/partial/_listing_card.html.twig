@@ -1,0 +1,22 @@
+
+{% if containerClass is not defined %}
+    {% set containerClass = 'col-lg-4 col-md-6 col-sm-12' %}
+{% endif %}
+
+<div class="{{ containerClass }}">
+
+<div class="card mx-auto mb-4 " style="width: 18rem;">
+    <a href={{ path('app_listing_show', { 'id': trendlisting.id }) }}>
+    <img src="{{ trendlisting.image }}" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+        <h5 class="card-title">{{ trendlisting.model.name }}</h5>
+        <p class="card-text">  {{ trendlisting.model.brand.name }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">prix: {{ trendlisting.price }}€</li>
+        <li class="list-group-item">Année de production: {{ trendlisting.producedYear }}</li>
+        <li class="list-group-item">Kilométrage: {{ trendlisting.mileage }} km</li>
+    </ul>
+</div>
+</div>
+
